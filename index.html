@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<hml lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+    body{
+      background-image: url("ali.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    </style>
+</head>
+<body>
+    <form action="">
+         <div class="container bg-success bg-opacity-25 mt-4 text-white p-5 fs-5 fw-semibold rounded-4">
+            <h1 class="text-center p-2">Student Registration Form</h1>
+        <div class="row row-cols-3">
+            
+                <div class="col-xxl py-2">
+                    <label for="name" class="form-label">Name:
+                    <input type="text" id="name" class="form-control form-control-lg" placeholder="Enter your name">
+                    </label>
+                </div>
+
+                <div class="col-xxl py-2">
+                    <label for="fname" class="form-label">Father Name:
+                    <input type="text" id="fname" class="form-control form-control-lg" placeholder="Enter your father name">
+                    </label>
+               </div>
+
+                <div class="col-xxl py-2">
+                    <label for="phone" class="form-label">Phone:
+                    <input type="number" id="phone" class="form-control form-control-lg" placeholder="Enter your phone number">
+                    </label>
+                </div>
+
+                <div class="col-xxl py-2">
+                    <label for="RollNo" class="form-label">Roll No:
+                    <input type="number" id="RollNo" class="form-control form-control-lg" placeholder="Enter your Roll No">
+                    </label>
+                </div>
+
+               <div class="col-xxl py-2">
+                    <label for="email" class="form-label">Email:
+                    <input type="email" id="email" class="form-control form-control-lg" placeholder="Enter your email">
+                    </label>
+                </div>
+
+                <div class="col-xxl py-2">
+                    <label for="course" class="form-label">Course:
+                     <select name="" id="course" class="form-control form-control-lg">
+                       <option value="">Select Course</option>
+                       <option value="Artificial Intelligence">Artificial Intelligence</option>
+                       <option value="Data Science">Data Science</option>
+                       <option value="Software Engineering">Software Engineering</option>
+                       <option value="Web Development">Web Development</option>
+                       <option value="Mobile App Development">Mobile App Development</option>
+                       <option value="Graphic Designing">Graphic Designing</option>
+                       <option value="Machine Learning">Machine Learning</option>
+                       <option value="Cyber Security">Cyber Security</option>
+                      </select>
+                   </label>
+                </div>
+
+               <div class="col-xxl py-2">
+                    <label for="city" class="form-label">City:
+                      <select name="city" id="city" class="form-control form-control-lg">
+                         <option value="Select Your City">Select Your City</option>
+                        <option value="Lahore">Lahore</option>
+                        <option value="Quetta">Quetta</option>
+                        <option value="Multan">Multan</option>
+                        <option value="Peshawar">Peshawar</option>
+                        <option value="Islamabad">Islamabad</option>
+                        <option value="RawalPindi">RawalPindi</option>
+                        <option value="HyderAbad">HyderAbad</option>
+                        <option value="Karachi">Karachi</option>
+                      </select>
+                   </label>
+                </div>
+
+                <div class="col-xxl py-2">
+                   <label for="DOB" class="form-label">Date of Birth: 
+                    <input type="date" id="DOB" class="form-control form-control-lg" placeholder="yy/mm/dd">
+                   </label>
+                </div>
+
+        </div>
+
+         <div class="d-grid mt-5">
+        <button type="submit" class="btn btn-primary text-white rounded-4 fw-bold p-2">Register Student</button>
+      </div>
+
+     </div>
+    </form>
+
+    <!-- Display Area -->
+     <div class="container bg-primary bg-opacity-25 text-white p-3 m-5 rounded-5">
+        <h1 class="text-center text-warning">Student Record</h1>
+        <div class="row row-cols-2">
+            <div class="col-xxl">
+              <h2 class="m-5" id="stdName">Name:</h2>
+            </div>
+ 
+            <div class="col-xxl">
+              <h4 class="m-5" id="stdFatherName">Father Name:</h4>
+            </div>
+
+            <div class="col-xxl">
+                <h4 class="m-5" id="stdRoll">Roll No:</h4>
+            </div>
+
+            <div class="col-xxl">
+                <h4 class="m-5" id="studentEmail">Email:</h4>
+            </div>
+
+            <div class="col-xxl">
+                 <h4 class="m-5" id="StudentPhone">Phone:</h4>
+            </div>
+
+            <div class="col-xxl">
+                <h4 class="m-5" id="StudentCourse">Course:</h4>
+            </div>
+
+            <div class="col-xxl">
+                <h4 class="m-5" id="birthDate">Date of Birth:</h4>
+            </div>
+
+            <div class="col-xxl">
+                <h4 class="m-5" id="stdCity">City:</h4>
+            </div>
+
+        </div>
+     </div>
+
+    
+
+
+
+
+
+</body>
+<script>
+  let name = document.getElementById("name")
+  let fname = document.getElementById("fname")
+  let RollNo = document.getElementById("RollNo")
+  let email = document.getElementById("email")
+  let phone = document.getElementById("phone")
+  let course = document.getElementById("course")
+  let DOB = document.getElementById("DOB")
+  let city = document.getElementById("city")
+
+  let form = document.querySelector("form")
+
+  let stdName= document.getElementById("stdName")
+  let stdFatherName = document.getElementById("stdFatherName")
+  let stdRoll = document.getElementById("stdRoll")
+  let studentEmail = document.getElementById("studentEmail")
+  let call = document.getElementById("StudentPhone")
+  let subject = document.getElementById("StudentCourse")
+  let birthDate = document.getElementById("birthDate")
+  let studentCity = document.getElementById("stdCity")
+
+  form.addEventListener("submit" , function(e){
+    e.preventDefault();
+
+    stdName.innerText = "Name:" + " " + name.value;
+    stdName.style.fontStyle ="italic";
+
+    stdFatherName.innerText ="Father Name:" + " " + fname.value;
+    stdFatherName.style.fontStyle ="italic";
+
+    stdRoll.innerText ="Roll No:" + " " + RollNo.value;
+    stdRoll.style.fontStyle ="italic";
+
+    studentEmail.innerText ="Email:" + " " + email.value;
+    studentEmail.style.fontStyle ="italic";
+
+    call.innerText ="Phone:" + " " + phone.value;
+    call.style.fontStyle ="italic";
+
+    subject.innerText ="Course:" + " " + course.value;
+    subject.style.fontStyle ="italic";
+
+    birthDate.innerText ="Date of Birth:" + " " + DOB.value;
+    birthDate.style.fontStyle ="italic";
+
+    studentCity.innerText ="City:" + " " + city.value;
+    studentCity.style.fontStyle ="italic";
+  })
+
+  </script>
+</html>
